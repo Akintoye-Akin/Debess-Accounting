@@ -57,6 +57,10 @@
         padding-bottom: 90px;
     }
 
+    .hero_area .header_section .header_top {
+        font-size: 8px;
+    }
+
     .layout_padding-top {
         padding-top: 90px;
     }
@@ -110,6 +114,11 @@
     .contact_section form {
         margin-bottom: 45px;
     }
+
+    .map_container .map iframe {
+        width: 350px;
+        height: 400px;
+      }
 
     .info_section .info_items::before {
         width: 1px;
