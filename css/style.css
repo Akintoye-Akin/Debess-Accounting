@@ -1111,11 +1111,10 @@ span {
 /* back to top */
 .back-to-top {
   position: fixed;
-  /* display: none; */
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  right: 10px;
+  right: 20px;
   bottom: 40px;
   background: var(--primary3);
   color: var(--black);
