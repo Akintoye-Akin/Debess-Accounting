@@ -421,24 +421,27 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <form action="POST" method="POST" data-netlify="trues">
-            <div>
-              <input type="text" name="text" class="form-control" id="name" placeholder="Name" />
-            </div>
-            <div>
-              <input type="text" name="Phone" class="form-control" id="Phone" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="email" name="Email" class="form-control" id="email" placeholder="Email"/>
-            </div>
-            <div>
-              <input type="text" name="message" class="message-box" class="form-control" id="messdge" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <button>
-                Request Quote
-              </button>
-            </div>
+          <form name="contact" method="POST" data-netlify="true">
+            <p>
+              <label>Your Name: <input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <label>Your Role: <select name="role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select></label>
+            </p>
+            <p>
+              <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
+          
           </form>
         </div>
         <div class="col-md-6">
