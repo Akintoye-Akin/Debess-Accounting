@@ -42,233 +42,106 @@ html {
   padding-bottom: 120px;
 }
 
-.heading_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.heading_container h2 {
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-transform: uppercase;
-  font-family: 'Merriweather Sans', sans-serif;
-}
-
-.heading_container p {
-  margin-bottom: 0;
-}
-
-.heading_container.heading_center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Merriweather Sans', sans-serif;
-  color: var(--primary3);
-}
-
-/* h2 {
-  font-style: italic;
-  color: var(--primary3);
-} */
-
-span2 {
-  color: black;
-}
-
-a,
-a:hover,
-a:focus {
-  text-decoration: none;
-}
-
-/*header section*/
+/* General Header Styling */
 .hero_area {
-  position: relative;
-  background-color: var(--primary2);
+  background-color: #f8f9fa; /* Light background for the hero area */
+  padding: 0;
 }
 
-.header_section .container-fluid {
-  padding-right: 25px;
-  padding-left: 25px;
+.header_section {
+  background-color: #343a40; /* Dark background for the header */
+  color: white;
 }
 
-.header_section .header_top {
-  padding: 15px 0;
-  background-color: var(--primary2);
- 
-}
-
-.header_section .header_top .contact_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header_section .header_top .contact_nav a {
-  color: var(--black);
-}
-
-.header_section .header_top .contact_nav a i {
-  color: var(--primary3);
-}
-
-.header_section .header_bottom {
+/* Header Top (Contact Info) */
+.header_top {
+  background-color: #212529; /* Slightly darker background for contact area */
   padding: 10px 0;
 }
 
-.navbar-brand {
-  padding: 0;
-  margin: 0;
-  color: #000000;
-  font-weight: bold;
-  font-size: 24px;
-  font-weight: bold;
+.contact_nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
 }
 
-.navbar-brand span img {
-  color: var(--primary3);
-  text-transform: uppercase;
-  width: 130px;
+.contact_nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.contact_nav a i {
+  margin-right: 5px;
+}
+
+/* Header Bottom (Navbar) */
+.header_bottom {
+  background-color: #343a40;
+  padding: 10px 0;
 }
 
 .custom_nav-container {
   padding: 0;
 }
 
-.custom_nav-container .navbar-nav {
+.navbar {
+  padding: 0;
+}
+
+.navbar-brand img {
+  height: 40px; /* Adjust the logo size */
+}
+
+.navbar-nav {
   margin-left: auto;
 }
 
-.custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 10px 25px;
-  color: var(--black);
-  text-align: center;
+.nav-item {
+  margin-left: 20px;
 }
 
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: var(--primary3);
+.nav-link {
+  color: white !important;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.custom_nav-container .form-inline .nav_search-btn {
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-  color: #000000;
+.nav-link:hover {
+  color: #ffc107 !important; /* Hover color */
 }
 
-.custom_nav-container .form-inline .nav_search-btn:hover {
-  color: var(--primary3);
+.nav-item.active .nav-link {
+  color: #ffc107 !important; /* Active link color */
 }
 
-.custom_nav-container .navbar-toggler {
-  outline: none;
+.navbar-toggler {
+  border-color: #ffc107;
 }
 
-.custom_nav-container .navbar-toggler {
-  padding: 0;
-  width: 37px;
-  height: 42px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .contact_nav {
+    justify-content: space-between;
+  }
+
+  .contact_nav a {
+    font-size: 12px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
 }
 
-.custom_nav-container .navbar-toggler span {
-  display: block;
-  width: 35px;
-  height: 4px;
-  background-color: #000000;
-  margin: 7px 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  position: relative;
-  border-radius: 5px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000000;
-  top: -10px;
-  border-radius: 5px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.custom_nav-container .navbar-toggler span::after {
-  top: 10px;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  top: 0;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] .s-1 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  margin: 0;
-  margin-bottom: -4px;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] .s-2 {
-  display: none;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] .s-3 {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  margin: 0;
-  margin-top: -4px;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="false"] .s-1,
-.custom_nav-container .navbar-toggler[aria-expanded="false"] .s-2,
-.custom_nav-container .navbar-toggler[aria-expanded="false"] .s-3 {
-  -webkit-transform: none;
-          transform: none;
-}
 
 .quote_btn-container {
   display: -webkit-box;
