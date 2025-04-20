@@ -13,6 +13,31 @@ body {
   --primar4:#ABC2E8;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: var(--primary3);
+}
+
+/* h2 {
+  font-style: italic;
+  color: var(--primary3);
+} */
+
+span2 {
+  color: black;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,30 +69,30 @@ html {
 
 /* General Header Styling */
 .hero_area {
-  background-color: #f8f9fa; /* Light background for the hero area */
+  background-color: var(--primary2); /* Light background for the hero area */
   padding: 0;
 }
 
 .header_section {
-  background-color: #343a40; /* Dark background for the header */
-  color: white;
+  background-color: var(--primary2); /* Dark background for the header */
+  color: var(--black); /* White text color */
 }
 
 /* Header Top (Contact Info) */
 .header_top {
-  background-color: #212529; /* Slightly darker background for contact area */
+  background-color: var(--primary2); /* Slightly darker background for contact area */
   padding: 10px 0;
 }
 
 .contact_nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content:flex-start;
   align-items: center;
   font-size: 14px;
 }
 
 .contact_nav a {
-  color: white;
+  color: var(--black);
   margin-right: 20px;
   text-decoration: none;
 }
@@ -78,7 +103,7 @@ html {
 
 /* Header Bottom (Navbar) */
 .header_bottom {
-  background-color: #343a40;
+  background-color: var(--primary2); /* Darker background for the navbar */
   padding: 10px 0;
 }
 
@@ -103,7 +128,7 @@ html {
 }
 
 .nav-link {
-  color: white !important;
+  color: var(--black);
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
@@ -111,15 +136,15 @@ html {
 }
 
 .nav-link:hover {
-  color: #ffc107 !important; /* Hover color */
+  color: var(--primary3) !important; /* Hover color */
 }
 
 .nav-item.active .nav-link {
-  color: #ffc107 !important; /* Active link color */
+  color: var(--primary3) !important; /* Active link color */
 }
 
 .navbar-toggler {
-  border-color: #ffc107;
+  border-color: var(--primary3);
 }
 
 /* Mobile Responsive */
@@ -142,22 +167,6 @@ html {
   }
 }
 
-
-.quote_btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.quote_btn-container a {
-  color: #ffffff;
-  margin-right: 25px;
-  text-transform: uppercase;
-}
-/*end header section*/
 
 /* slider section */
 .slider_section {
@@ -393,7 +402,7 @@ html {
 
 /* about section */
 .about_section {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     background-color: var(--white);
 }
 
@@ -486,6 +495,7 @@ html {
   color: #333;
   font-weight: 700;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Service Section */
@@ -546,7 +556,7 @@ html {
 
 /*  start of what we offer section */
 .what_we_offer_section {
-  /* padding: 60px 0; */
+  padding: 30px 0;
   background-color: #f8f8f8;
 }
 
@@ -559,6 +569,7 @@ html {
 /* Heading Styles */
 .heading_container h2 {
   margin: 20px auto;
+  text-align: center;
 }
 
 /* Carousel Wrap */
