@@ -86,7 +86,11 @@ html {
 
 .contact_nav {
   display: flex;
-  justify-content:flex-start;
+  justify-content:space-between;  
+  padding: 0 20px;
+  background-color: var(--primary2);
+  color: var(--black);
+  height: 50px;
   align-items: center;
   font-size: 14px;
 }
@@ -695,12 +699,13 @@ html {
 
 /* Individual Service Card */
 .service_item {
-  background-color: var(--primary2);
+  background-color: var(--primary1);
   border-radius: 1rem;
-  padding: 2rem;
+  margin: 5px 5px;
+  padding: 3px 1.5px;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  max-width: 320px;
+  width: 250px;
   transition: all 0.3s ease;
 }
 
@@ -711,7 +716,7 @@ html {
 
 /* Icon Styling */
 .service_icon {
-  background-color: #e8f0ff;
+  background-color: white;
   color: var(--primary3);
   font-size: 2rem;
   width: 60px;
