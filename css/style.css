@@ -214,6 +214,12 @@ html {
   height: auto;
 }
 
+@media(max-width: 768px) {
+  .slider-image img {
+    display: none;
+  }
+}
+
 
 
 
