@@ -819,7 +819,7 @@ html {
 
 /* Card Layout */
 .service_section2 .card {
-  background-color: var(--primary2);
+  /* background-color: var(--primary2); */
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s ease;
