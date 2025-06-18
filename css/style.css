@@ -74,7 +74,7 @@ html {
 }
 
 .header_section {
-  background-color: var(--primary2); /* Dark background for the header */
+  background-color: var(--black); /* Dark background for the header */
   color: var(--black); /* White text color */
 }
 
@@ -144,11 +144,29 @@ html {
 }
 
 .navbar-toggler {
-  border-color: var(--primary3);
+  border-color: var(--black);
 }
 
+/* Toggle Styles */
+.toggle-button {
+  background-color: var(--primary3); /* Default color */
+  color: var(--primary3);
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Change color of toggle button on smaller screens (below 768px) */
+@media (min-width: 768px) {
+  .toggle-button {
+    background-color: var(--primary3); /* Change to green */
+  }
+}
+
+
 /* Mobile Responsive */
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .contact_nav {
     justify-content: space-between;
   }
@@ -209,6 +227,14 @@ html {
   max-width: 100%;
   height: auto;
 }
+
+@media (min-width: 768px) {
+  .slider-image img {
+    display: none;
+  }
+}
+
+
 
 
 
@@ -288,14 +314,22 @@ html {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (min-width: 375px) {
   .feature_container {
+    display: none;
     flex-direction: column;
     align-items: center;
   }
 
   .feature_container .box {
     max-width: 90%;
+  }
+}
+
+@media (min-width: 375px) {
+  .feature_container .box {
+    max-width: 100%;
+    display: none;
   }
 }
 
@@ -379,7 +413,7 @@ html {
 
 .value_section .container .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .value_section .container .wrapper .value {
@@ -678,10 +712,10 @@ html {
 }
 
 .how_we_help_section .heading_container p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #666;
   max-width: 700px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   text-align: center;
 }
 
@@ -690,7 +724,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* Individual Service Card */
@@ -700,7 +734,7 @@ html {
   padding: 2rem;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  max-width: 320px;
+  max-width: auto;
   transition: all 0.3s ease;
 }
 
@@ -811,7 +845,7 @@ html {
 /* List Styling */
 .service_section2 ul {
   padding-left: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .service_section2 ul li {
@@ -819,7 +853,7 @@ html {
   margin-bottom: 0.5rem;
   color: #333;
   font-size: 1rem;
-  position: relative;
+  /* position: re; */
   padding-left: 1.5rem;
 }
 
@@ -1247,6 +1281,90 @@ html {
   background: rgb(57, 141, 57);
   transition: background 0.2s ease-in-out;
 }
+
+/* Mobile media query for screens 378px or smaller */
+@media (max-width: 378px) {
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .hero_area {
+    padding-bottom: 20px;
+  }
+
+  .slider_section .detail-box {
+    font-size: 14px; /* Adjust text size */
+    margin-bottom: 15px;
+  }
+
+  .slider_section .img-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .feature_section .feature_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .feature_section .feature_container .box {
+    width: 90%; /* Make boxes take more space on small screens */
+    margin-bottom: 15px;
+  }
+
+  .about_section .img-box {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .about_section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .professional_section .img-box,
+  .professional_section .detail-box {
+    text-align: center;
+  }
+
+  .service_section .box {
+    margin-bottom: 20px;
+  }
+
+  .client_section {
+    padding: 20px 10px;
+  }
+
+  .contact_section .form-control,
+  .contact_section .message-box {
+    margin-bottom: 10px;
+  }
+
+  .suscribe_section .input-group {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .suscribe_section input.form-control {
+    width: 100%;
+  }
+
+  .suscribe_section button {
+    width: 100%;
+  }
+
+  .info_section {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+
 
 
 /* end footer section*/
