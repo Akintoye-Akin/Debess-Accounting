@@ -76,6 +76,10 @@ html {
 .header_section {
   background-color: var(--black); /* Dark background for the header */
   color: var(--black); /* White text color */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d3d3d3; /* match your navbar background */
 }
 
 /* Header Top (Contact Info) */
@@ -88,7 +92,7 @@ html {
   display: flex;
   justify-content:space-between;  
   padding: 0 20px;
-  background-color: var(--primary2);
+  /* background-color: var(--primary1); */
   color: var(--black);
   height: 50px;
   align-items: center;
@@ -116,11 +120,14 @@ html {
 }
 
 .navbar {
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
 
 .navbar-brand img {
-  height: 40px; /* Adjust the logo size */
+  height: 70px; /* Adjust the logo size */
 }
 
 .navbar-nav {
@@ -153,6 +160,8 @@ html {
 
 /* Toggle Styles */
 .toggle-button {
+  display: none; /* Hide the toggle button by default */
+  position: absolute;
   background-color: var(--primary3); /* Default color */
   color: var(--primary3);
   border: none;
