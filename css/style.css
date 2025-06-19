@@ -114,7 +114,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 10px;
 }
 
 .navbar-brand img {
@@ -851,15 +851,15 @@ html {
   list-style: none;
   margin-bottom: 0.5rem;
   color: #333;
-  font-size: 1rem;
+  font-size: 0.8rem;
   /* position: re; */
-  padding-left: 1.5rem;
+  /* padding-left: 1.5rem; */
 }
 
 .service_section2 ul li::before {
   content: "✓";
   position: absolute;
-  left: 0;
+  /* left: 0; */
   color: #28a745;
   font-weight: bold;
 }
@@ -874,7 +874,9 @@ html {
   border-radius: 50px;
   transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  justify-content: center;
+
 }
 
 .service_section2 .btn-box a:hover,
@@ -882,6 +884,15 @@ html {
   background-color: var(--primary1);
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+.service_section2 .btn-box a,
+.service_section2 .text-center a.btn {
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem;
+}
 }
 
 /* end of help, section */
