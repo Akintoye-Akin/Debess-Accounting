@@ -73,15 +73,6 @@ html {
   padding: 0;
 }
 
-.header_section {
-  background-color: var(--black); /* Dark background for the header */
-  color: var(--black); /* White text color */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #d3d3d3; /* match your navbar background */
-}
-
 /* Header Top (Contact Info) */
 .header_top {
   background-color: var(--primary2); /* Slightly darker background for contact area */
@@ -158,38 +149,33 @@ html {
   border-color: var(--black);
 }
 
-/* Toggle Styles */
-.toggle-button {
-  display: none; /* Hide the toggle button by default */
-  position: absolute;
-  background-color: var(--primary3); /* Default color */
-  color: var(--primary3);
-  border: none;
-  padding: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgb(0, 173, 61)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
 
+
 /* Change color of toggle button on smaller screens (below 768px) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .toggle-button {
-    background-color: var(--primary3); /* Change to green */
+    display: block; /* Show the toggle button on smaller screens */
+    color: var(--primary3); /* Change color */
   }
 }
 
 
 /* Mobile Responsive */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .contact_nav {
     justify-content: space-between;
   }
 
   .contact_nav a {
-    font-size: 12px;
+    font-size: 6px;
   }
 
   .navbar-nav {
     flex-direction: column;
+
     text-align: center;
   }
 
@@ -258,6 +244,7 @@ html {
 .feature_section {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  display: none;
 }
 
 .feature_section .feature_container {
@@ -346,7 +333,7 @@ html {
 
 .about2_section {
   background-color: var(--primary2);
-  padding-top:80px ;
+  padding-top:10px ;
 }
 
 /* professional section in about page */
@@ -901,8 +888,9 @@ html {
 
 /* start of professional section */
 .professional_section {
-  padding: 60px 0;
+  padding: 40px 40px;
   background-color: #fefefe;
+  text-align: center;
 }
 
 .professional_section .img-box img {
@@ -978,7 +966,7 @@ html {
 }
 
 .service_card {
-  background: #fff;
+  background: var(--primary1);
   padding: 30px 25px;
   border-radius: 15px;
   text-align: center;
@@ -1034,6 +1022,9 @@ html {
 @media (max-width: 767px) {
   .service_card {
     padding: 25px 20px;
+    margin:20px 0 ;
+    background-color: var(--primary2);
+    border-bottom: 4px solid var(--primary3);
   }
 
   .service_title {
